@@ -26,5 +26,5 @@ struct UserStatsView: View {
 
 
 #Preview {
-    UserStatsView()
+    UserStatsView(value: 5, title: "Takip Edilen")
 }

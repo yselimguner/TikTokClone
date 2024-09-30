@@ -9,7 +9,16 @@ import SwiftUI
 
 struct NotificationsView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack{
+            LazyVStack(spacing: 24){
+                ForEach(0..<10){notification in
+                    NotificationCell()
+                }
+            }
+            .navigationTitle("Gelen Kutusu")
+            .navigationBarTitleDisplayMode(.inline)
+            .padding(.top)
+        }
     }
 }
 

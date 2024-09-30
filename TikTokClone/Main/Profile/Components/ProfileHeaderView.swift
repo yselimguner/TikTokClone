@@ -32,6 +32,21 @@ struct ProfileHeaderView: View {
                 UserStatsView(value: 5000, title: "Beğeni Sayısı")
 
             }
+            
+            //Action Butonu
+            Button {
+                
+            } label: {
+                Text("Profili Düzenle")
+                    .font(.subheadline)
+                    .fontWeight(.semibold)
+                    .foregroundStyle(.black)
+                    .frame(width: 360,height: 32)
+                    .background(Color(.systemGray6))
+                    .clipShape(RoundedRectangle(cornerRadius: 6))
+            }
+            Divider()
+
         }
     }
 }
@@ -40,19 +55,3 @@ struct ProfileHeaderView: View {
     ProfileHeaderView()
 }
 
-struct UserStatsView: View {
-    let value:Int
-    let title:String
-    var body: some View {
-        VStack{
-            Text("\(value)")
-                .font(.subheadline)
-                .fontWeight(.bold)
-            
-            Text(title)
-                .font(.caption)
-                .foregroundStyle(.gray)
-        }
-        .frame(width: 80,alignment: .center)
-    }
-}

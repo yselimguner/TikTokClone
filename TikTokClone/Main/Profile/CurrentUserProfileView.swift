@@ -9,7 +9,21 @@ import SwiftUI
 
 struct CurrentUserProfileView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack{
+            ScrollView{
+                VStack(spacing:2){
+                    //profile header
+                    ProfileHeaderView()
+                    
+                    //Post Grid View
+                    PostGridView()
+                    
+                }
+                .padding(.top)
+            }
+            .navigationTitle("Profil")
+            .navigationBarTitleDisplayMode(.inline)
+        }
     }
 }
 

@@ -23,7 +23,7 @@ struct MainTabBarView: View {
                 .onAppear{selectedTab = 0}
                 .tag(0)
             
-            Text("Arkadaşlar")
+            ExploreView()
                 .tabItem {
                     VStack{
                         Image(systemName: selectedTab == 1 ? "person.2.fill" : "person.2")
@@ -43,18 +43,18 @@ struct MainTabBarView: View {
                     }
                 }
             
-            Text("Notifications")
+            NotificationsView()
                 .tabItem {
                     VStack{
-                        Image(systemName: selectedTab == 3 ? "heart.fill" : "heart")
+                        Image(systemName: selectedTab == 3 ? "bubble.fill" : "bubble")
                             .environment(\.symbolVariants, selectedTab == 3 ? .fill : .none)
-                        Text("Okunmamış")
+                        Text("Gelen Kutusu")
                     }
                 }
                 .onAppear{selectedTab = 3}
                 .tag(3)
             
-            Text("Profile")
+            CurrentUserProfileView()
                 .tabItem {
                     VStack{
                         Image(systemName: selectedTab == 4 ? "person.fill" : "person")
